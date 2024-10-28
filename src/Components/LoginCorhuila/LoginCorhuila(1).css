@@ -1,0 +1,103 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    background-color: #E5DCDC;
+    padding: 70px; /* Mantén el padding mínimo si es necesario */
+    margin: 0;
+}
+  
+  
+  .login-header {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .login-header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    display: block;
+  }
+  
+  .separator {
+    width: 70%;               /* Cambia el ancho de la línea a 70% */
+    border: none;             /* Quita el borde por defecto */
+    border-top: 2px solid #259e0d; /* Línea verde */
+    margin: 0 auto;           /* Centra la línea horizontalmente */
+    margin-bottom: 5px;      /* Ajusta el margen inferior para reducir la distancia al texto */
+  }
+  
+  .login-header p {
+    font-size: 20px;
+    color: #8a8a8a;
+    margin: 0;                /* Elimina el margen superior e inferior */
+    margin-bottom: 40px; /* Ajusta el margen inferior para separar el texto de los campos de entrada */
+    display: block;
+  }
+
+  .login-form {
+    background-color: white;
+    padding: 30px; /* Ajusta el padding si es necesario */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Asegura que el formulario no se expanda más allá del ancho del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  }
+
+  
+  .login-input {
+    width: calc(100% - 20px); /* Resta el padding para que el campo se ajuste al ancho del formulario */
+    padding: 10px;
+    margin-bottom: 20px; /* Ajusta el margen entre los campos */
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+
+  }
+
+  .login-button {
+    width: auto; 
+    max-width: 200px; /* Establece un ancho máximo para el botón */
+    padding: 8px 16px; /* Ajusta el padding */
+    background-color:#006983; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Quita el borde por defecto */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin: 20px auto; /* Centra el botón horizontalmente en su contenedor */
+    display: block; /* Asegura que el botón se comporte como un bloque para el centrado */
+  }
+  
+  .login-button:hover {
+    background-color: #0984a3;
+  }
+  
+  
+  .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 40px; /* Ajusta el margen superior si es necesario */
+    font-size: 16px;
+    color: #00796b;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .forgot-password:hover {
+    color: #005b4f;
+  }
+  
+  

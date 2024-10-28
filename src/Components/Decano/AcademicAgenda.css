@@ -1,0 +1,74 @@
+.agenda-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #1a3b5d; /* Mismo color de encabezado que en el anterior CSS */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px 15px; /* Tamaño consistente con el anterior diseño */
+  text-align: center;
+}
+
+th {
+  background-color: #1a3b5d; /* Fondo oscuro para los encabezados */
+  color: #fff; /* Texto blanco */
+  text-transform: uppercase; /* Mayúsculas para los encabezados */
+  font-weight: bold;
+}
+
+td {
+  background-color: #f9f9f9; /* Color claro para las filas */
+}
+
+.ok-button, .x-button, .download-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ok-button {
+  color: green;
+}
+
+.x-button {
+  color: red;
+}
+
+.download-button {
+  color: #1a3b5d; /* Mismo color del encabezado */
+}
+
+.download-button:hover {
+  color: #004080; /* Oscurecido para hover, acorde al estilo */
+}
+
+.send-button {
+  border: none;
+  background-color: #1a3b5d;
+  color: #fff;
+  padding: 6px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #004080;
+}

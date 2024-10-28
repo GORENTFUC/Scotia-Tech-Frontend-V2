@@ -1,0 +1,77 @@
+.agenda-container {
+  width: 90%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #1a3b5d;
+  margin-bottom: 20px;
+}
+
+.agenda-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.agenda-table th, .agenda-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.agenda-table th {
+  background-color: #1a3b5d;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.agenda-table td {
+  background-color: #f9f9f9;
+}
+
+.estado-selector {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+}
+
+.recomendacion-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  height: 80px;
+}
+
+.descargar-btn,
+.enviar-btn {
+  background-color: #1a3b5d;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.enviar-btn {
+  background-color: #4CAF50; /* Verde para diferenciar del botón de descarga */
+}
+
+.descargar-btn:hover,
+.enviar-btn:hover {
+  background-color: #0f2e4a;
+}
+
+.enviar-btn:hover {
+  background-color: #3a8e3a;
+}

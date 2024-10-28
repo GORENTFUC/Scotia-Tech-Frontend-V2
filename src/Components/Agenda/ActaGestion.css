@@ -1,0 +1,32 @@
+/* TablaGestionAcademica.css */
+.tabla-verde {
+    background-color: #e9f5e9; /* Fondo verde claro para la tabla */
+  }
+  
+  .table th {
+    background-color: #28a745; /* Color verde para el encabezado */
+    color: white; /* Color del texto blanco */
+    text-align: center; /* Centramos el texto del encabezado */
+  }
+  
+  .line-separadora td {
+    border-bottom: 2px solid black; /* Línea negra separadora */
+  }
+  
+  .table td {
+    text-align: center; /* Centramos el texto de las celdas */
+    vertical-align: middle; /* Alineamos el contenido verticalmente */
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #d4edda; /* Color de las filas impares */
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa; /* Color de las filas pares */
+  }
+  
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #28a745; /* Borde verde para las celdas */
+  }
+  

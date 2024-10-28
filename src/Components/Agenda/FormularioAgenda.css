@@ -1,0 +1,177 @@
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fc1717; /* Color de fondo claro */
+  border-radius: 5px; /* Opcional: redondear esquinas */
+}
+
+
+
+
+.table-container {
+  margin: 20px 0;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.modal-contenido h2 {
+  color: #4CAF50;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 20px;
+}
+
+.modal-contenido form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modal-contenido form input,
+.modal-contenido form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.modal-contenido form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+button[type="submit"],
+button[type="button"] {
+  flex: 1;
+  margin: 0 5px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  background-color: #153949; /* Color de fondo */
+  color: white; /* Color del texto */
+  display: flex; /* Usa flexbox para alinear */
+  justify-content: space-between; /* Espaciado entre elementos */
+  align-items: center; /* Centra verticalmente */
+  padding: 15px 20px; /* Espaciado interno */
+}
+
+.header-content {
+  display: flex; /* Flexbox para el contenido del header */
+  align-items: center; /* Centra verticalmente el logo y el texto */
+}
+
+.logo {
+  width: 80px; /* Tamaño del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+nav ul {
+  display: flex; /* Flexbox para el menú de navegación */
+  list-style: none; /* Sin viñetas */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+}
+
+nav li {
+  margin: 0 15px; /* Espaciado entre elementos del menú */
+}
+
+nav a {
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Color del texto del enlace */
+  transition: background-color 0.3s; /* Transición suave */
+  padding: 10px; /* Espaciado interno para los enlaces */
+}
+
+nav a:hover {
+  background-color: #0984a3; /* Color al pasar el mouse */
+  border-radius: 5px; /* Esquinas redondeadas al pasar el mouse */
+}

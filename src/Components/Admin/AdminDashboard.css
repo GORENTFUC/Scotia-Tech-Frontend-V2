@@ -1,0 +1,80 @@
+.admin-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h2, h3 {
+    color: #2f4f4f;
+  }
+  
+  .create-user {
+    margin-bottom: 20px;
+  }
+  
+  .create-user input {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px 15px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .edit-button, .delete-button, .save-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .edit-button {
+    color: #007bff;
+  }
+  
+  .edit-button:hover {
+    color: #0056b3;
+  }
+  
+  .delete-button {
+    color: red;
+  }
+  
+  .delete-button:hover {
+    color: darkred;
+  }
+  
+  .save-button {
+    color: green;
+  }
+  
+  .save-button:hover {
+    color: darkgreen;
+  }
