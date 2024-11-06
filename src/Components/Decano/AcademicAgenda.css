@@ -6,7 +6,7 @@
 }
 
 h2 {
-  color: #1a3b5d; /* Mismo color de encabezado que en el anterior CSS */
+  color: #1a3b5d; 
   text-align: center;
   margin-bottom: 20px;
 }
@@ -22,19 +22,19 @@ table, th, td {
 }
 
 th, td {
-  padding: 12px 15px; /* Tamaño consistente con el anterior diseño */
+  padding: 12px 15px; 
   text-align: center;
 }
 
 th {
-  background-color: #1a3b5d; /* Fondo oscuro para los encabezados */
-  color: #fff; /* Texto blanco */
-  text-transform: uppercase; /* Mayúsculas para los encabezados */
+  background-color: #1a3b5d;
+  color: #fff;
+  text-transform: uppercase;
   font-weight: bold;
 }
 
 td {
-  background-color: #f9f9f9; /* Color claro para las filas */
+  background-color: #f9f9f9;
 }
 
 .ok-button, .x-button, .download-button {
@@ -53,11 +53,11 @@ td {
 }
 
 .download-button {
-  color: #1a3b5d; /* Mismo color del encabezado */
+  color: #1a3b5d;
 }
 
 .download-button:hover {
-  color: #004080; /* Oscurecido para hover, acorde al estilo */
+  color: #004080;
 }
 
 .send-button {

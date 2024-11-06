@@ -4,7 +4,6 @@ import './EstadoAgenda.css';
 const EstadoAgenda = () => {
   const [data, setData] = useState([
     { id: 1, code: 'AS-2024-B2', phase: 'Director de programa', date: '18-09-2024', status: 'aprobado', recommendation: '' },
-    // Añade más elementos si es necesario
   ]);
 
   const handleStatusChange = (event, id) => {

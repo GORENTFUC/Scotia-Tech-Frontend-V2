@@ -3,7 +3,7 @@ import './AcademicAgenda.css';
 
 const AcademicAgenda = () => {
   const [directorProgram, setDirectorProgram] = useState(true);
-  const [recommendations, setRecommendations] = useState(['']); // Manejo de recomendaciones por fila
+  const [recommendations, setRecommendations] = useState(['']);
 
   const handleToggle = () => {
     setDirectorProgram(!directorProgram);
@@ -45,7 +45,7 @@ const AcademicAgenda = () => {
               <td>AS-2024-B2</td>
               <td>Jesus Ariel Gonzalez</td>
               <td>
-                {/* Caja de texto para escribir recomendaciones */}
+                {}
                 <textarea 
                   value={recommendations[index]} 
                   onChange={(e) => handleRecommendationChange(index, e)} 
@@ -57,7 +57,7 @@ const AcademicAgenda = () => {
               <td>18-09-2024</td>
               <td>2024-A</td>
               <td>
-                {/* Botones de acción */}
+                {}
                 <button 
                   className={directorProgram ? 'ok-button' : 'x-button'}
                   onClick={handleToggle}

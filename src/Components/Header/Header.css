@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+.header-content h2 {
+  color: white;
+  margin: 0;
+}
+
 .logo {
   width: 80px;
   margin-right: 5px;
@@ -22,12 +27,14 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center; /* Alinea verticalmente todos los elementos */
 }
 
 nav li {
   margin: 0 10px;
+  display: flex;
+  align-items: center; /* Asegura la alineación vertical dentro de cada elemento de la lista */
 }
-
 
 nav a {
   text-decoration: none;
@@ -37,4 +44,24 @@ nav a {
 
 nav a:hover {
   background-color: #0984a3;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-flex; /* Ajusta la alineación del botón en línea */
+  align-items: center; /* Centra el texto del botón verticalmente */
+}
+
+.logout-button:hover {
+  background-color: #0984a3;
+  color: white;
+  border-color: #0984a3;
 }
