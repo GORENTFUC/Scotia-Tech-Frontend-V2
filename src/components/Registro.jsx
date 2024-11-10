@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import { Button, Form, FormGroup, Container, Card, CardBody, FormFeedback, Input, Label } from 'reactstrap';
 import { useNavigate } from 'react-router-dom';
+import UserServices from '../services/UserServices';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
@@ -42,7 +43,7 @@ function Registro() {
 
     const fetchProgramsByFaculty = async (facultadId) => {
         try {
-            const response = await axios.get(`http://localhost:8080/api/Program/Programs?facultadId=${facultadId}`);
+            const response = UserServices.programsByFaculty(facultadId);
             const data = response.data;
             setPrograms(data.data); 
         } catch (error) {

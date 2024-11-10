@@ -4,11 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import * as XLSX from "xlsx";
 import { FormControl, Container, Table, Tabs, Tab, Button, FormGroup } from "react-bootstrap";
 import { Input } from "reactstrap";
-import plantilla from '../plantilla.xlsx'; // Importar la plantilla desde src
+import plantilla from '../plantilla.xlsx'; 
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ExcelJS from "exceljs";
 import { saveAs } from "file-saver";
+
 
 
 const AgendaForm = () => {
