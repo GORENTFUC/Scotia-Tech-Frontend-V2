@@ -25,27 +25,24 @@ function Registro() {
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
+
     const fetchFaculties = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/api/program/faculties'); 
-            const data = response.data;
-            setFaculties(data.data);
+            const response = await UserServices.faculties();
+            if (response && response.data) {
+                setFaculties(response.data.data); // Asegurarse de acceder correctamente a los datos
+            }
         } catch (error) {
-            console.error("Error al obtener las facultades:", error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Hubo un problema al cargar las facultades.',
-                confirmButtonText: 'Aceptar'
-            });
+            console.error("Error en el consumo", error);
         }
     };
 
     const fetchProgramsByFaculty = async (facultadId) => {
         try {
-            const response = UserServices.programsByFaculty(facultadId);
-            const data = response.data;
-            setPrograms(data.data); 
+            const response = await UserServices.programsByFaculty(facultadId);
+            if (response && response.data) {
+                setPrograms(response.data.data); // Asegurarse de acceder correctamente a los datos
+            }
         } catch (error) {
             console.error("Error al obtener los programas:", error);
         }
@@ -67,11 +64,10 @@ function Registro() {
             }));
             setPrograms([]);
         } else if (name === 'documentNumber') {
-            // Establece la contraseña como el número de documento
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: value,
-                password: value // La contraseña será el número de documento
+                password: value 
             }));
         } else {
             setFormData((prevData) => ({
@@ -135,42 +131,13 @@ function Registro() {
             };
             
             try {
-                const response = await axios.post('http://localhost:8080/api/user/register', user, {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
-            
-                const { status, message } = response.data; 
-
-                if (status === 200 || status === 201) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Registro exitoso',
-                        text: message || 'El usuario ha sido registrado correctamente.',
-                        confirmButtonText: 'Aceptar'
-                    }).then(() => {
-                        navigate("/"); 
-                    });
-                }
-                if (status === 400) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error en el registro',
-                        text: message || 'No se pudo registrar el usuario, por favor inténtalo nuevamente.',
-                        confirmButtonText: 'Aceptar'
-                    });
-                }
-            } catch (error) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error en el registro',
-                    text: error.response?.data?.message || 'No se pudo registrar el usuario, por favor inténtalo nuevamente.',
-                    confirmButtonText: 'Aceptar'
-                });
-            }
+           await UserServices.register(user);    
+        }catch (error) {
+            console.error("Error al obtener los programas:", error);
         }
-    };
+    }
+};
+
 
     const styles = {
         page: {
@@ -328,7 +295,7 @@ function Registro() {
                                             <option disabled value="">Selecciona un programa</option>
                                             {programs.map((program) => (
                                                 <option key={program.id} value={program.id}>
-                                                    {program.nombre}
+                                                    {program.name}
                                                 </option>
                                             ))}
                                         </Input>
