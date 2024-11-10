@@ -258,8 +258,8 @@ function Registro() {
                                     onChange={handleChange}
                                 >
                                     <option disabled value="">Selecciona un rol</option>
-                                    <option value="2">Director de programa</option>
-                                    <option value="3">Decano</option>
+                                    <option value="2">Decano</option>
+                                    <option value="3">Director de programa</option>
                                     <option value="4">Docente</option>
                                 </Input>
                             </FormGroup>
