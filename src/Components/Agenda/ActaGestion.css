@@ -1,32 +1,38 @@
-/* TablaGestionAcademica.css */
-.tabla-verde {
-    background-color: #e9f5e9; /* Fondo verde claro para la tabla */
-  }
-  
-  .table th {
-    background-color: #28a745; /* Color verde para el encabezado */
-    color: white; /* Color del texto blanco */
-    text-align: center; /* Centramos el texto del encabezado */
-  }
-  
-  .line-separadora td {
-    border-bottom: 2px solid black; /* Línea negra separadora */
-  }
-  
-  .table td {
-    text-align: center; /* Centramos el texto de las celdas */
-    vertical-align: middle; /* Alineamos el contenido verticalmente */
-  }
-  
-  .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #d4edda; /* Color de las filas impares */
-  }
-  
-  .table-striped tbody tr:nth-of-type(even) {
-    background-color: #f8f9fa; /* Color de las filas pares */
-  }
-  
-  .table-bordered th, .table-bordered td {
-    border: 1px solid #28a745; /* Borde verde para las celdas */
-  }
-  
+.table-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la caja */
+  margin: 20px 0;
+}
+
+/* Estilos para la tabla */
+.table th {
+  background-color: #153949; /* Encabezado en color oscuro */
+  color: white; /* Texto blanco */
+  text-align: center;
+}
+
+.table td {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo claro con opacidad para las celdas */
+  color: #153949; /* Color de texto */
+}
+
+/* Alternar colores en las filas */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(217, 217, 217, 0.8); /* Color alterno para filas impares */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: rgba(242, 242, 242, 0.8); /* Color alterno para filas pares */
+}
+
+.line-separadora td {
+  border-bottom: 2px solid #153949; /* Línea separadora en color principal */
+}
+
+/* Estilos para las alertas de totales */
+.alert-info {
+  background-color: rgba(21, 57, 73, 0.2); /* Fondo con un tono del color principal */
+  color: #153949;
+  border: 1px solid #153949;
+}

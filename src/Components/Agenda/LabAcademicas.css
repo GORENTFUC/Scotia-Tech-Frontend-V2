@@ -1,0 +1,53 @@
+/* Contenedor principal para tablas con sombreado */
+.container {
+    max-width: 80%; /* Ajusta el ancho máximo del contenedor */
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle efecto de elevación */
+}
+
+/* Estilos de la tabla */
+.table {
+    background-color: #fff; /* Fondo blanco para la tabla */
+    margin-bottom: 20px;
+}
+
+.table th {
+    background-color: #153949; /* Encabezado oscuro */
+    color: white;
+    text-align: center;
+}
+
+.table td {
+    color: #153949; /* Color de texto en las celdas */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(217, 217, 217, 0.8); /* Color alterno para filas impares */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(242, 242, 242, 0.8); /* Color alterno para filas pares */
+}
+
+/* Estilo para los inputs dentro de las tablas */
+.form-control {
+    font-size: 0.9rem;
+}
+
+/* Estilo para el texto de alerta de totales */
+.alert-info {
+    background-color: rgba(21, 57, 73, 0.2);
+    color: #153949;
+    border: 1px solid #153949;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Estilo de alineación de elementos */
+.text-center {
+    text-align: center;
+}

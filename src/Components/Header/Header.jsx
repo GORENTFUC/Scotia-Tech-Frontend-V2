@@ -60,7 +60,6 @@ const Header = () => {
     }
   };
 
-  // Verifica si el usuario está autenticado (por ejemplo, si hay un token en localStorage)
   const isAuthenticated = Boolean(localStorage.getItem('authToken'));
 
   return (
@@ -74,7 +73,7 @@ const Header = () => {
           <li><a href="https://corhuila.edu.co/" onClick={(e) => { e.preventDefault(); handleLinkClick('https://corhuila.edu.co/'); }}>Inicio</a></li>
           <li><a href="https://plus.corhuila.edu.co/sgacampus/" onClick={(e) => { e.preventDefault(); handleLinkClick('https://plus.corhuila.edu.co/sgacampus/'); }}>CorhuilaPlus+</a></li>
           <li><a href="https://virtual.corhuila.edu.co/" onClick={(e) => { e.preventDefault(); handleLinkClick('https://virtual.corhuila.edu.co/'); }}>Moodle</a></li>
-          {/* Mostrar el botón "Salir" solo si el usuario está autenticado */}
+          {}
           {isAuthenticated && (
             <li><button onClick={handleLogout} className="logout-button">Salir</button></li>
           )}

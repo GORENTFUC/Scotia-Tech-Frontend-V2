@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ActaGestion.css'; // Importa el archivo CSS
+import './ActaGestion.css';
 
 const actividadesData = [
   {
     nombre: "Participación como jurado y/o asesor académico en trabajos de grado",
-    dedicacionSemanal: 2,
+    dedicacionSemanal: 0,
     descripcion: "Actividad preparar clase",
     productos: [
       "OFICIO DE RETROALIMENTACIÓN DE OPCIONES DE GRADO PARA PREGRADO Y POSGRADO - F0-GD-51 (POR TRABAJO DE GRADO ASIGNADO)"
     ]
-  },
-  {
+  },{
     nombre: "Participación en procesos de registros calificados",
     dedicacionSemanal: 0,
     descripcion: "Actividad evaluación",
@@ -116,16 +115,16 @@ const ActividadRow = ({ actividad, index, checkboxStates, handleCheckboxChange, 
         type="number" 
         className="form-control" 
         value={actividad.dedicacionSemanal} 
-        onChange={(e) => handleDedicacionChange(index, Number(e.target.value))} // Maneja el cambio en las horas semanales
+        onChange={(e) => handleDedicacionChange(index, Number(e.target.value))}
       />
     </td>
-    <td>{actividad.dedicacionSemanal * 16}</td> {/* Calcula las horas semestrales */}
+    <td>{actividad.dedicacionSemanal * 16}</td>
     <td>
       <textarea 
         className="form-control" 
         value={actividad.descripcion} 
-        onChange={(e) => handleDescripcionChange(index, e.target.value)} // Maneja el cambio en la descripción
-        style={{ minHeight: '80px', resize: 'vertical' }} // Aumenta la altura y permite redimensionar
+        onChange={(e) => handleDescripcionChange(index, e.target.value)}
+        style={{ minHeight: '80px', resize: 'vertical' }}
       />
     </td>
     <td>
@@ -135,8 +134,8 @@ const ActividadRow = ({ actividad, index, checkboxStates, handleCheckboxChange, 
             className="form-check-input" 
             type="checkbox" 
             id={`producto-${index}-${idx}`} 
-            checked={checkboxStates[index][idx]} // Estado del checkbox
-            onChange={() => handleCheckboxChange(index, idx)} // Maneja el cambio
+            checked={checkboxStates[index][idx]}
+            onChange={() => handleCheckboxChange(index, idx)}
           />
           <label className="form-check-label ms-2" htmlFor={`producto-${index}-${idx}`}>
             {producto}
@@ -148,38 +147,34 @@ const ActividadRow = ({ actividad, index, checkboxStates, handleCheckboxChange, 
 );
 
 const TablaGestionAcademica = () => {
-  const [actividades, setActividades] = useState(actividadesData); // Estado para las actividades
+  const [actividades, setActividades] = useState(actividadesData);
   const totalSemanal = actividades.reduce((total, actividad) => total + Number(actividad.dedicacionSemanal), 0);
   const totalSemestral = actividades.reduce((total, actividad) => total + Number(actividad.dedicacionSemanal) * 16, 0);
   
-  // Estado para almacenar el estado de los checkboxes
   const [checkboxStates, setCheckboxStates] = useState(
     actividadesData.map(() => Array(actividadesData[0].productos.length).fill(false))
   );
 
-  // Función para manejar el cambio de estado de los checkboxes
   const handleCheckboxChange = (actividadIndex, productoIndex) => {
     const updatedCheckboxStates = [...checkboxStates];
     updatedCheckboxStates[actividadIndex][productoIndex] = !updatedCheckboxStates[actividadIndex][productoIndex];
     setCheckboxStates(updatedCheckboxStates);
   };
 
-  // Función para manejar el cambio en la descripción
   const handleDescripcionChange = (actividadIndex, nuevaDescripcion) => {
     const updatedActividades = [...actividades];
-    updatedActividades[actividadIndex].descripcion = nuevaDescripcion; // Actualiza la descripción
-    setActividades(updatedActividades); // Actualiza el estado
+    updatedActividades[actividadIndex].descripcion = nuevaDescripcion;
+    setActividades(updatedActividades);
   };
 
-  // Función para manejar el cambio en las horas semanales
   const handleDedicacionChange = (actividadIndex, nuevaDedicacion) => {
     const updatedActividades = [...actividades];
-    updatedActividades[actividadIndex].dedicacionSemanal = nuevaDedicacion; // Actualiza las horas semanales
-    setActividades(updatedActividades); // Actualiza el estado
+    updatedActividades[actividadIndex].dedicacionSemanal = nuevaDedicacion;
+    setActividades(updatedActividades);
   };
 
   return (
-    <div className="container mt-4">
+    <div className="table-container">
       <h2 className="text-center mb-4">Agenda Académica: Detalles de Actividades y Dedicación</h2>
       
       <table className="table table-striped table-bordered table-sm">

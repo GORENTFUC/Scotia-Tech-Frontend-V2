@@ -1,16 +1,16 @@
 .welcome-container {
   text-align: center;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 30px;
-  border: 2px solid #2f4f4f;
   border-radius: 10px;
-  background-color: #f0f8ff;
+  background-color: #ffffff;
   max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(47, 79, 79, 0.5);
+  border: none;
 }
 
 .welcome-container h2 {
-  color: #2f4f4f;
+  color: #153949;
   margin-bottom: 10px;
 }
 
@@ -24,4 +24,12 @@
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
+  background-color: #153949;
+  color: #ffffff; 
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.welcome-container .btn:hover {
+  background-color: #1e3c3c;
 }
