@@ -1,23 +1,15 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import './LoginCorhuila.css';
-=======
 // LoginCorhuila.jsx
 import React, { useState } from 'react';
 import './LoginCorhuila.css';
 import { useAuth } from '../../Utils/AuthContext';
 import { useNavigate } from 'react-router-dom';
->>>>>>> dd692a9 (Autenticación del login y seguridad)
 
 const LoginCorhuila = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ username: '', password: '' });
-<<<<<<< HEAD
-=======
   const { login } = useAuth();
   const navigate = useNavigate();
->>>>>>> dd692a9 (Autenticación del login y seguridad)
 
   const validateForm = () => {
     let formIsValid = true;
@@ -43,16 +35,11 @@ const LoginCorhuila = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-<<<<<<< HEAD
-      console.log('Usuario:', username, 'Contraseña:', password);
-      // Aquí puedes añadir la lógica de autenticación, como una llamada a un servicio de login
-=======
       if (login(username, password)) {
         navigate('/agenda'); // Redirige al usuario según sea necesario
       } else {
         setErrors({ username: '', password: 'Usuario o contraseña incorrectos' });
       }
->>>>>>> dd692a9 (Autenticación del login y seguridad)
     }
   };
 
@@ -93,8 +80,4 @@ const LoginCorhuila = () => {
   );
 };
 
-<<<<<<< HEAD
 export default LoginCorhuila;
-=======
-export default LoginCorhuila;
->>>>>>> dd692a9 (Autenticación del login y seguridad)
