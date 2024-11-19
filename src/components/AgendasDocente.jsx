@@ -13,13 +13,11 @@ const AgendasTable = () => {
     const fetchAgendas = async () => {
       try {
         const response = await axios.get(`http://localhost:8080/api/agendas/user/${userId}`);
-        console.log('Response from backend:', response.data);  
         setAgendas(response.data);
       } catch (error) {
         console.error('Error fetching agendas:', error);
       }
     };
-  
     fetchAgendas();
   }, [userId]);
 
@@ -102,7 +100,7 @@ const AgendasTable = () => {
 const styles = {
   page: {
     display: 'flex',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     minHeight: '100vh',
@@ -110,7 +108,7 @@ const styles = {
     backgroundColor: '#f4f4f4',
   },
   title: {
-    color: '#28a745',
+    color: '#153949',
     marginBottom: '20px',
   },
   info: {
@@ -122,7 +120,7 @@ const styles = {
     borderCollapse: 'collapse',
   },
   headerRow: {
-    backgroundColor: '#28a745',
+    backgroundColor: '#153949',
     color: 'white',
   },
   th: {
@@ -137,10 +135,11 @@ const styles = {
   },
   button: {
     padding: '5px 10px',
-    backgroundColor: '#28a745',
+    backgroundColor: '#153949',
     color: 'white',
     border: 'none',
     cursor: 'pointer',
+    borderRadius: '5px',
   },
   pagination: {
     marginTop: '20px',
@@ -148,10 +147,11 @@ const styles = {
   pageButton: {
     margin: '0 5px',
     padding: '5px 10px',
-    backgroundColor: '#28a745',
+    backgroundColor: '#153949',
     color: 'white',
     border: 'none',
     cursor: 'pointer',
+    borderRadius: '5px',
   },
 };
 

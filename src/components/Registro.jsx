@@ -1,26 +1,24 @@
-import React, { useState, useEffect } from 'react'; 
-import fondo from '../Fondo.png';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import { Button, Form, FormGroup, Container, Card, CardBody, FormFeedback, Input, Label } from 'reactstrap';
+import fondo from '../Fondo.png';
 import { useNavigate } from 'react-router-dom';
+import { Button, Form, FormGroup, Container, Card, CardBody, FormFeedback, Input, Label } from 'reactstrap';
 import UserServices from '../services/UserServices';
-import axios from 'axios';
-import Swal from 'sweetalert2';
 
 function Registro() {
     const [formData, setFormData] = useState({
         firstName: '',
         firstLastName: '',
         documentNumber: '',
-        password: '', // Se establecerá automáticamente
+        password: '',
         email: '',
         role: '',
         faculty: '',
         program: ''
     });
 
-    const [faculties, setFaculties] = useState([]); 
+    const [faculties, setFaculties] = useState([]);
     const [programs, setPrograms] = useState([]);
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
@@ -30,7 +28,7 @@ function Registro() {
         try {
             const response = await UserServices.faculties();
             if (response && response.data) {
-                setFaculties(response.data.data); // Asegurarse de acceder correctamente a los datos
+                setFaculties(response.data.data);
             }
         } catch (error) {
             console.error("Error en el consumo", error);
@@ -41,7 +39,7 @@ function Registro() {
         try {
             const response = await UserServices.programsByFaculty(facultadId);
             if (response && response.data) {
-                setPrograms(response.data.data); // Asegurarse de acceder correctamente a los datos
+                (response.data.data); // Asegurarse de acceder correctamente a los datos
             }
         } catch (error) {
             console.error("Error al obtener los programas:", error);
@@ -49,10 +47,10 @@ function Registro() {
     };
 
     useEffect(() => {
-        fetchFaculties(); 
+        fetchFaculties();
     }, []);
 
-    const shouldShowFacultyAndProgram = formData.role === '2' || formData.role === '4';
+    const shouldShowFacultyAndProgram = formData.role === '3' || formData.role === '4';
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -60,14 +58,14 @@ function Registro() {
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: value,
-                ...(value !== '2' && value !== '4' ? { faculty: '', program: '' } : {})
+                ...(value !== '3' && value !== '4' ? { faculty: '', program: '' } : {})
             }));
             setPrograms([]);
         } else if (name === 'documentNumber') {
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: value,
-                password: value 
+                password: value
             }));
         } else {
             setFormData((prevData) => ({
@@ -82,7 +80,7 @@ function Registro() {
         setFormData({ ...formData, [name]: value });
 
         if (name === 'faculty') {
-            fetchProgramsByFaculty(value); 
+            fetchProgramsByFaculty(value);
         }
     };
 
@@ -129,14 +127,14 @@ function Registro() {
                 facultad: formData.faculty,
                 programa: formData.program
             };
-            
+
             try {
-           await UserServices.register(user);    
-        }catch (error) {
-            console.error("Error al obtener los programas:", error);
+                await UserServices.register(user);
+            } catch (error) {
+                console.error("Error al obtener los programas:", error);
+            }
         }
-    }
-};
+    };
 
 
     const styles = {
@@ -165,7 +163,7 @@ function Registro() {
         button: {
             gridColumn: '1 / -1',
             padding: '10px',
-            backgroundColor: '#28a745',
+            backgroundColor: '#153949',
             color: 'white',
             border: 'none',
             borderRadius: '4px',
@@ -175,6 +173,14 @@ function Registro() {
             color: 'red',
             fontSize: '12px',
         },
+        title: {
+            textAlign: 'center',
+            fontWeight: 'bold',
+        },
+        important: {
+            color: 'red',
+            textAlign: 'center',
+        }
     };
 
     return (
@@ -183,7 +189,7 @@ function Registro() {
                 <Card style={styles.card}>
                     <CardBody>
                         <h2 style={styles.title}>Administración Registros de Usuarios</h2>
-                        <p>Importante: Debes ingresar los datos exactamente como se muestran en el documento reportado.</p>
+                        <p style={styles.important}>Importante: Debes ingresar los datos exactamente como se muestran en el documento reportado.</p>
                         <Form onSubmit={handleSubmit} style={styles.form}>
                             <FormGroup>
                                 <Input
@@ -224,7 +230,7 @@ function Registro() {
                                 <FormFeedback>{errors.documentNumber}</FormFeedback>
                             </FormGroup>
 
-                            {/* Campo de contraseña deshabilitado y con valor automático */}
+                            { }
                             <FormGroup>
                                 <Input
                                     type="text"
@@ -264,26 +270,26 @@ function Registro() {
                                 </Input>
                             </FormGroup>
                             <FormGroup>
-                                        <Input
-                                            type="select"
-                                            className="form-control mt-3"
-                                            name="faculty"
-                                            value={formData.faculty}
-                                            onChange={handleChangeFacul}
-                                        >
-                                            <option disabled value="">Selecciona una facultad</option>
-                                            {faculties.map((facultad) => (
-                                                <option key={facultad.facultyId} value={facultad.facultyId}>
-                                                    {facultad.name}
-                                                </option>
-                                            ))}
-                                        </Input>
-                                    </FormGroup>
+                                <Input
+                                    type="select"
+                                    className="form-control mt-3"
+                                    name="faculty"
+                                    value={formData.faculty}
+                                    onChange={handleChangeFacul}
+                                >
+                                    <option disabled value="">Selecciona una facultad</option>
+                                    {faculties.map((facultad) => (
+                                        <option key={facultad.facultyId} value={facultad.facultyId}>
+                                            {facultad.name}
+                                        </option>
+                                    ))}
+                                </Input>
+                            </FormGroup>
 
 
                             {shouldShowFacultyAndProgram && (
                                 <>
-                                   
+
                                     <FormGroup>
                                         <Input
                                             type="select"

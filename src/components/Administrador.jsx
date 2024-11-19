@@ -15,7 +15,6 @@ const GestionAdministrador = () => {
     },
   ]);
 
-  // Estados para la edición
   const [showEditModal, setShowEditModal] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [editedData, setEditedData] = useState({});
@@ -35,104 +34,72 @@ const GestionAdministrador = () => {
   };
 
   const handleSaveChanges = () => {
-    // Actualizamos el estado de formDataUser con los datos editados
     const updatedUsers = [...formDataUser];
     updatedUsers[currentUser] = editedData;
     setFormDataUser(updatedUsers);
-
-    // Cerramos el modal
     setShowEditModal(false);
+  };
+
+  // Estilos en línea
+  const styles = {
+    container: {
+      marginTop: "80px", // Separación de la navbar
+    },
+    tableHeader: {
+      backgroundColor: "#153949", // Azul para los encabezados
+      color: "#FFFFFF",
+      textAlign: "center", // Centrar el texto de los encabezados
+    },
+    title: {
+      color: "#153949",
+      fontWeight: "bold",
+      marginBottom: "20px",
+    },
+    actionButtons: {
+      margin: "5px",
+    },
   };
 
   return (
     <>
-      <br />
-      <Container className="text-success text-start">
-        <h2>Gestión de Usuarios</h2>
-      </Container>
-
-      <Container>
-        <div>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th
-                  style={{
-                    width: "200px",
-                    backgroundColor: "#4CAF50",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Nombres
-                </th>
-                <th
-                  style={{
-                    width: "200px",
-                    backgroundColor: "#4CAF50",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Apellidos
-                </th>
-                <th
-                  style={{
-                    width: "200px",
-                    backgroundColor: "#4CAF50",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Número de Documento
-                </th>
-                <th
-                  style={{
-                    width: "130px",
-                    backgroundColor: "#4CAF50",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Contraseña
-                </th>
-                <th
-                  style={{
-                    width: "200px",
-                    backgroundColor: "#4CAF50",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Email
-                </th>
-                <th
-                  style={{
-                    width: "100px",
-                    backgroundColor: "#4CAF50",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Acciones
-                </th>
+      <Container style={styles.container}>
+        <h2 style={styles.title}>Gestión de Usuarios</h2>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th style={{ ...styles.tableHeader, width: "200px" }}>Nombres</th>
+              <th style={{ ...styles.tableHeader, width: "200px" }}>Apellidos</th>
+              <th style={{ ...styles.tableHeader, width: "200px" }}>Número de Documento</th>
+              <th style={{ ...styles.tableHeader, width: "130px" }}>Contraseña</th>
+              <th style={{ ...styles.tableHeader, width: "200px" }}>Email</th>
+              <th style={{ ...styles.tableHeader, width: "100px" }}>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {formDataUser.map((item, index) => (
+              <tr key={index}>
+                <td>{item.firstName}</td>
+                <td>{item.firstLastName}</td>
+                <td>{item.documentNumber}</td>
+                <td>{item.password}</td>
+                <td>{item.email}</td>
+                <td>
+                  <Button
+                    variant="primary"
+                    style={{
+                      ...styles.actionButtons,
+                      backgroundColor: "#153949",
+                      borderColor: "#153949",
+                    }}
+                    onClick={() => handleEditClick(item, index)}
+                  >
+                    Editar
+                  </Button>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {formDataUser.map((item, index) => (
-                <tr key={index}>
-                  <td>{item.firstName}</td>
-                  <td>{item.firstLastName}</td>
-                  <td>{item.documentNumber}</td>
-                  <td>{item.password}</td>
-                  <td>{item.email}</td>
-                  <td>
-                    <Button
-                      variant="success"
-                      onClick={() => handleEditClick(item, index)}
-                    >
-                      Editar
-                    </Button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
+            ))}
+          </tbody>
+        </Table>
       </Container>
 
       {/* Modal para editar usuario */}
@@ -187,10 +154,21 @@ const GestionAdministrador = () => {
           </FormGroup>
         </Modal.Body>
         <Modal.Footer>
-        <Button variant="success" onClick={handleSaveChanges}>
+          <Button
+            variant="primary"
+            style={{
+              backgroundColor: "#153949",
+              borderColor: "#153949",
+            }}
+            onClick={handleSaveChanges}
+          >
             Actualizar
           </Button>
-          <Button variant="danger" onClick={() => setShowEditModal(false)}>
+          <Button
+            variant="danger"
+            style={styles.actionButtons}
+            onClick={() => setShowEditModal(false)}
+          >
             Cancelar
           </Button>
         </Modal.Footer>

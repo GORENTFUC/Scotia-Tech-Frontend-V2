@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 class ApiService {
   constructor() {
-    this.apiUrl = process.env.REACT_APP_API_URL; 
+    this.apiUrl = 'http://localhost:8080/api'; 
 }
 
   async programsByFaculty(facultadId) {
@@ -24,7 +24,7 @@ class ApiService {
   
   async faculties() {
     try {
-        const response = await axios.get(`${this.apiUrl}/program/faculties`);
+        const response = await axios.get('http://localhost:8080/api/program/faculties');
         return response; 
     } catch (error) {
         console.error("Error al obtener las facultades:", error);

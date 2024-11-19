@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Registro from './Registro';
-import logoCorhuila from '../logoCorhuila.jpg';
-import fondo from '../Fondo.png';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import { jwtDecode } from 'jwt-decode'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
+import logoCorhuila from '../logoCorhuila.jpg';
+import fondo from '../Fondo.png';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Registro from './Registro';
+import { useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 import { Button, Form, FormGroup, Container, Card, CardBody, Input } from 'reactstrap';
 
 const Login = () => {
@@ -23,7 +23,7 @@ const Login = () => {
         email: username,
         password: password,
       };
-      /* http://ec2-18-189-202-101.us-east-2.compute.amazonaws.com:8081*/
+
       const response = await axios.post('http://localhost:8080/api/user/login', loginData, {
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const Login = () => {
       });
 
       const { status, message, data } = response.data;
-      
+
       if (status === 200 || status === 201) {
         decodeToken(data);
       } else if ([400, 403, 401, 404].includes(status)) {
@@ -63,17 +63,18 @@ const Login = () => {
     localStorage.setItem('email', decodedToken.email);
     localStorage.setItem('role', decodedToken.role);
 
+    // Ajustar las rutas basadas en App.js
     if (userRole === 'Docente') {
-      navigate("/AgendasDocente"); 
+      navigate("/agendas-docente");
     }
     if (userRole === 'Admin') {
-      navigate("/Administracion");
+      navigate("/admin");
     }
     if (userRole === 'Decano') {
-      navigate("/Decano/Autorizacion_Decano");
+      navigate("/decano");
     }
     if (userRole === 'Director De programa') {
-      navigate("/DirectorPrograma");
+      navigate("/director");
     }
   };
 
@@ -87,26 +88,29 @@ const Login = () => {
             </div>
             <Form onSubmit={handleSubmit}>
               <FormGroup>
-                <Input 
-                  type="email" 
-                  className="form-control mt-3" 
-                  id="username" 
-                  placeholder="Correo electrónico" 
-                  value={username} 
+                <Input
+                  type="email"
+                  className="form-control mt-3"
+                  id="username"
+                  placeholder="Correo electrónico"
+                  value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </FormGroup>
               <FormGroup>
-                <Input 
-                  type="password" 
-                  className="form-control mt-3" 
-                  id="inputPassword" 
-                  placeholder="Contraseña" 
-                  value={password} 
+                <Input
+                  type="password"
+                  className="form-control mt-3"
+                  id="inputPassword"
+                  placeholder="Contraseña"
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </FormGroup>
-              <Button type="submit" color="success">
+              <Button
+                type="submit"
+                style={styles.button}
+              >
                 Acceder
               </Button>
               <div className="mt-3">
@@ -128,7 +132,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#ffff',
     backgroundImage: `url(${fondo})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -150,10 +154,23 @@ const styles = {
     justifyContent: 'center',
     marginBottom: '20px',
   },
+  button: {
+    display: 'block',
+    margin: '20px auto',
+    padding: '10px 20px',
+    backgroundColor: '#153949', // Azul oscuro
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    fontSize: '16px',
+  },
   link: {
-    color: '#28a745',
+    color: '#153949',
     textDecoration: 'none',
   },
 };
+
+
 
 export default Login;

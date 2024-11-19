@@ -1,23 +1,18 @@
-.custom-navbar {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-
-}
-
-.logo{
+.logo {
   height: 60px;
   width: 60px;
-  margin-left: 40px; 
+  margin-left: 40px;
 }
 
-.logo-login{
+.logo-login {
   height: 90px;
   width: 90px;
 }
 
-.icon-user{
+.icon-user {
   height: 30px;
   width: 30px;
-  fill: green;
+  fill: #153949; /* Cambiado a azul oscuro */
 }
 
 .inputs {
@@ -35,3 +30,51 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo general del Navbar */
+.navbar-new {
+  background-color: #153949; /* Azul oscuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Espaciado entre logo, links y menú */
+  align-items: center; /* Centrar verticalmente */
+  padding: 0 20px;
+}
+
+/* Estilo del logo */
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Opciones de navegación (centro del Navbar) */
+.navbar-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+  gap: 20px; /* Espaciado entre enlaces */
+}
+
+/* Estilo de los enlaces del Navbar */
+.navbar-link {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.navbar-link:hover {
+  color: #00c3ff; /* Azul claro al pasar el mouse */
+}
+
+/* Icono del usuario (menú desplegable) */
+.navbar-user-icon {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}

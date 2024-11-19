@@ -88,46 +88,46 @@ const HistoricoDecano = () => {
   
 };
 const styles = {
-    page: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      minHeight: '100vh',
-      backgroundColor: '#f4f4f4',
-    },
-    title: {
-      color: '#28a745',
-      marginBottom: '20px',
-    },
-    table: {
-      width: '80%',
-      margin: '20px auto',
-      borderCollapse: 'collapse',
-    },
-    headerRow: {
-      backgroundColor: '#28a745', // Color verde para los encabezados
-      color: 'white',
-    },
-    th: {
-      padding: '10px',
-      border: '1px solid #ddd',
-      textAlign: 'center',
-    },
-    td: {
-      padding: '10px',
-      border: '1px solid #ddd',
-      textAlign: 'center',
-    },
-    button: {
-      padding: '5px 10px',
-      backgroundColor: '#28a745', // Color verde para el botón
-      color: 'white',
-      border: 'none',
-      cursor: 'pointer',
-    },
-
-  
+  page: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    backgroundColor: '#f4f4f4',
+  },
+  title: {
+    color: '#153949', // Cambiado a #153949
+    marginBottom: '20px',
+  },
+  table: {
+    width: '80%',
+    margin: '20px auto',
+    borderCollapse: 'collapse',
+  },
+  headerRow: {
+    backgroundColor: '#153949', // Cambiado a #153949
+    color: 'white',
+  },
+  th: {
+    padding: '10px',
+    border: '1px solid #ddd',
+    textAlign: 'center',
+    backgroundColor: '#153949', // Cambiado a #153949
+    color: 'white', // Para garantizar contraste
+  },
+  td: {
+    padding: '10px',
+    border: '1px solid #ddd',
+    textAlign: 'center',
+  },
+  button: {
+    padding: '5px 10px',
+    backgroundColor: '#153949', // Cambiado a #153949
+    color: 'white',
+    border: 'none',
+    cursor: 'pointer',
+  },
 };
 
 export default HistoricoDecano;

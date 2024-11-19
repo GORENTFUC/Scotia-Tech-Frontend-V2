@@ -118,7 +118,7 @@ const HistoricoDirector = () => {
 const styles = {
   page: {
     display: 'flex',
-    justifyContent: 'flex-start', // Cambiado para alinear hacia arriba
+    justifyContent: 'flex-start', // Mantener alineación hacia arriba
     alignItems: 'center',
     flexDirection: 'column',
     minHeight: '100vh',
@@ -126,7 +126,7 @@ const styles = {
     backgroundColor: '#f4f4f4',
   },
   title: {
-    color: '#28a745',
+    color: '#153949', // Cambiado a #153949
     marginBottom: '20px',
   },
   info: {
@@ -138,13 +138,15 @@ const styles = {
     borderCollapse: 'collapse',
   },
   headerRow: {
-    backgroundColor: '#28a745', // Color verde para los encabezados
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
   },
   th: {
     padding: '10px',
     border: '1px solid #ddd',
     textAlign: 'center',
+    backgroundColor: '#153949', // Cambiado a #153949
+    color: 'white', // Garantizar contraste
   },
   td: {
     padding: '10px',
@@ -153,7 +155,7 @@ const styles = {
   },
   button: {
     padding: '5px 10px',
-    backgroundColor: '#28a745', // Color verde para el botón
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
     border: 'none',
     cursor: 'pointer',
@@ -164,11 +166,12 @@ const styles = {
   pageButton: {
     margin: '0 5px',
     padding: '5px 10px',
-    backgroundColor: '#28a745',
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
     border: 'none',
     cursor: 'pointer',
   },
 };
+
 
 export default HistoricoDirector;

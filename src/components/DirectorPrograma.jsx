@@ -168,7 +168,7 @@ const styles = {
     backgroundColor: '#f4f4f4',
   },
   title: {
-    color: '#28a745',
+    color: '#153949', // Cambiado a #153949
     marginBottom: '20px',
   },
   table: {
@@ -177,13 +177,15 @@ const styles = {
     borderCollapse: 'collapse',
   },
   headerRow: {
-    backgroundColor: '#28a745',
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
   },
   th: {
     padding: '10px',
     border: '1px solid #ddd',
     textAlign: 'center',
+    backgroundColor: '#153949', // Cambiado a #153949
+    color: 'white', // Garantizar contraste
   },
   td: {
     padding: '10px',
@@ -192,7 +194,7 @@ const styles = {
   },
   button: {
     padding: '5px 10px',
-    backgroundColor: '#28a745',
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
     border: 'none',
     cursor: 'pointer',
@@ -200,7 +202,7 @@ const styles = {
   },
   approveButton: {
     padding: '5px 10px',
-    backgroundColor: '#007bff',
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
     border: 'none',
     cursor: 'pointer',
@@ -208,12 +210,13 @@ const styles = {
   },
   rejectButton: {
     padding: '5px 10px',
-    backgroundColor: '#dc3545',
+    backgroundColor: '#153949', // Cambiado a #153949
     color: 'white',
     border: 'none',
     cursor: 'pointer',
     marginLeft: '5px',
   },
 };
+
 
 export default DirectorPrograma;
