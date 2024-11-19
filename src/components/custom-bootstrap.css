@@ -1,0 +1,36 @@
+.text-success {
+    color: #153949 !important;
+  }
+  
+  .btn-success {
+    background-color: #153949 !important;
+    border-color: #153949 !important;
+  }
+  
+  .btn-success:hover {
+    background-color: #122c36 !important; /* Color más oscuro para hover */
+    border-color: #122c36 !important;
+  }
+  
+  .bg-success {
+    background-color: #153949 !important;
+  }
+  
+  .table-success {
+    background-color: #153949 !important;
+  }
+  
+  .text-secondary {
+    color: #153949 !important;
+  }
+  
+  .btn-secondary {
+    background-color: #153949 !important;
+    border-color: #153949 !important;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #122c36 !important; /* Color más oscuro para hover */
+    border-color: #122c36 !important;
+  }
+  

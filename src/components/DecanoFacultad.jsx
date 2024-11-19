@@ -90,7 +90,7 @@ const DecanoFacultad = () => {
       formData.append('decision', decision); 
       formData.append('idAgenda', agendaId);
   
-      const responseUpload = await axios.post("http://localhost:8080/api/dean/updateDean", formData, {
+      const responseUpload = await axios.post("http://18.189.202.101:8082/api/dean/updateDean", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

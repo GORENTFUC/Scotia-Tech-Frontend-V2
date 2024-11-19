@@ -23,8 +23,8 @@ const Login = () => {
         email: username,
         password: password,
       };
-
-      const response = await axios.post('http://localhost:8080/api/user/login', loginData, {
+//http://18.189.202.101:8081
+      const response = await axios.post('http://localhost:8083/api/user/login', loginData, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -56,19 +56,18 @@ const Login = () => {
     const decodedToken = jwtDecode(token);
     const userRole = decodedToken.role;
 
-    localStorage.setItem('idUser', decodedToken.idUser);
+    localStorage.setItem('usuario_id', decodedToken.user_id);
     localStorage.setItem('name', decodedToken.name);
     localStorage.setItem('facultad', decodedToken.facultad);
     localStorage.setItem('programa', decodedToken.programa);
     localStorage.setItem('email', decodedToken.email);
     localStorage.setItem('role', decodedToken.role);
 
-    // Ajustar las rutas basadas en App.js
     if (userRole === 'Docente') {
       navigate("/agendas-docente");
     }
     if (userRole === 'Admin') {
-      navigate("/admin");
+      navigate("/registro");
     }
     if (userRole === 'Decano') {
       navigate("/decano");

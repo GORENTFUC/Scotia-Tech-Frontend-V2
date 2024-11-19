@@ -1,6 +1,7 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import './custom-bootstrap.css';
 import * as XLSX from "xlsx";
 import { FormControl, Container, Table, Tabs, Tab, Button, FormGroup } from "react-bootstrap";
 import { Input } from "reactstrap";
@@ -1145,7 +1146,7 @@ const handleChange = (index, name, value) => {
     <>
     <br></br>
       <Container style={{paddingTop: '100px'}} className="text-success text-center">
-        <h1>Agenda Semestral Profesoral</h1>
+        <h1>Agenda Semestral</h1>
       </Container>
       <br></br>
       <Container>
@@ -1173,7 +1174,7 @@ const handleChange = (index, name, value) => {
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1182,7 +1183,7 @@ const handleChange = (index, name, value) => {
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1191,7 +1192,7 @@ const handleChange = (index, name, value) => {
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1200,7 +1201,7 @@ const handleChange = (index, name, value) => {
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1209,7 +1210,7 @@ const handleChange = (index, name, value) => {
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1314,7 +1315,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1323,7 +1324,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1332,7 +1333,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1341,7 +1342,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1350,7 +1351,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "190x",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1359,7 +1360,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "180px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1368,7 +1369,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1509,7 +1510,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1518,7 +1519,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1527,7 +1528,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1536,7 +1537,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1545,7 +1546,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1776,7 +1777,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1785,7 +1786,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1794,7 +1795,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1803,7 +1804,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1812,7 +1813,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1931,7 +1932,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1940,7 +1941,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1949,7 +1950,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1958,7 +1959,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -1967,7 +1968,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -2207,7 +2208,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -2216,7 +2217,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -2225,7 +2226,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "200px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -2234,7 +2235,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
@@ -2243,7 +2244,7 @@ value={localStorage.getItem('programa')}
                     <th
                       style={{
                         width: "300px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#153949",
                         color: "#FFFFFF",
                       }}
                     >
